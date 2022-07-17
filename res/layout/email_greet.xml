@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	>
+	<EditText
+		android:id="@+id/greet_email"
+		android:hint="Email"
+		android:layout_height="wrap_content"
+		android:inputType="textEmailAddress"
+		android:layout_width="fill_parent"
+		android:layout_toLeftOf="@+id/do_email_picker"
+		android:layout_alignParentLeft="true"
+		/>
+	<TextView
+		android:id="@+id/text_subject"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Subject"
+		android:layout_below="@+id/greet_email"
+		/>
+	<EditText
+		android:id="@+id/greet_subject"
+		android:text="Happy Birthday"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:layout_below="@+id/text_subject"
+		/>
+	<Button
+		android:id="@+id/email_send"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Send"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/greet_body"
+		android:onClick="doLaunchContactPicker"
+		/>
+	<EditText 
+		android:layout_width="fill_parent" 
+		android:id="@+id/greet_body" 
+		android:layout_height="wrap_content" 
+		android:inputType="textMultiLine" 
+		android:singleLine="false"
+		android:lines="5"
+		android:gravity="top|left"
+		android:layout_below="@+id/greet_subject"
+		/>
+</RelativeLayout>

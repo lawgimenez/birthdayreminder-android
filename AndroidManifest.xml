@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="law.android.BirthdayReminder"
+      android:versionCode="2"
+      android:versionName="1.1">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".BirthdayReminderActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DBAdapter">
+        	<intent-filter>
+        		<action android:name="android.intent.action.DBAdapter" />
+      		</intent-filter>
+        </activity>
+        <activity android:name=".ContactDetails">
+        	<intent-filter>
+        		<action android:name="android.intent.action.MAIN" />
+        		<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </activity>
+        <activity android:name=".ContactList"
+        		android:label="Contact List">
+        	<intent-filter>
+        		<action android:name="law.android.ContactList" />
+        		<category android:name="android.intent.category.DEFAULT"/>
+        	</intent-filter>		
+        </activity>
+        <activity android:name=".GreetEmail"
+        	android:label="Greet Email">
+        	<intent-filter>
+        		<action android:name="law.android.GreetEmail" />
+        		<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </activity>
+        <activity android:name=".BirthdayList"
+        	android:label="Birthday List"
+        	>
+        <intent-filter>
+        	<action android:name="law.android.BirthdayList" />
+        	<category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+</manifest>
